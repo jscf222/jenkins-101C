@@ -11,11 +11,18 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building.."
+              sh'''
+              echo "doing some building"
+              '''
             }
         }
         stage('Test') {
             steps {
                 echo "Testing.."
+
+              sh'''
+              echo "doing some testing in here"
+              '''
             }
         }
         stage('Deliver') {

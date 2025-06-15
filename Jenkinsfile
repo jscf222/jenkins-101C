@@ -1,7 +1,7 @@
 pipeline {
     agent { 
         node {
-            label 'docker-minion-python'
+            label 'docker-minion-alpine'
             }
       }
     triggers {
@@ -20,11 +20,6 @@ pipeline {
         stage('Test') {
             steps {
                 echo "Testing.."
-                sh '''
-                cd myapp
-                python3 hello.py
-                python3 hello.py --name=Brad
-                '''
             }
         }
         stage('Deliver') {

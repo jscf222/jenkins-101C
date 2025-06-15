@@ -1,7 +1,7 @@
 pipeline {
     agent { 
         node {
-            label 'docker-minion-alpine'
+            label 'docker-minion-python'
             }
       }
     triggers {
